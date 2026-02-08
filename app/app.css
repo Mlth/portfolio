@@ -1,9 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Bungee&display=swap');
+
 @import "tailwindcss" source(".");
+
+@plugin "tailwindcss-motion";
 
 @theme {
 	--font-sans:
 		"Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
 		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-bitcount:
+		"Bitcount Single", system-ui;
+	--font-bungee:
+		"Bungee", sans-serif;
+}
+
+/** 
+	Cool utilities for tailwindcss-motion
+*/
+@utility roll-in {
+  	@apply
+		motion-scale-in-50
+		motion-translate-x-in-[-120%]
+		motion-translate-y-in-[-60%]
+		motion-opacity-in-33
+		motion-rotate-in-[-1080deg]
+		motion-blur-in-[10px]
+
+		motion-delay-[0.38s]/scale
+		motion-duration-[0.38s]/opacity
+		motion-duration-[1.20s]/rotate
+		motion-duration-[0.15s]/blur
+		motion-delay-[0.60s]/blur
+
+		motion-ease-spring-bouncier;
+}
+
+@utility drop-in {
+	@apply 
+		motion-translate-y-in-[-2000%] 
+		motion-rotate-in-20
+		motion-blur-in-[20px] 
+		motion-duration
+		motion-duration-500/rotate motion-delay-500/rotate motion-duration-1000/blur
 }
 
 html,
