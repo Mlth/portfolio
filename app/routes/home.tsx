@@ -1,5 +1,6 @@
-import { Intro } from "~/components/intro";
+import { Intro } from "~/pages/intro";
 import type { Route } from "./+types/home";
+import Projects from "~/pages/projects";
 
 export function meta({}: Route.MetaArgs) {
 	return [
@@ -13,5 +14,10 @@ export function loader({ context }: Route.LoaderArgs) {
 }
 
 export default function Home({ loaderData }: Route.ComponentProps) {
-	return <Intro />;
+	return (
+		<>
+			<Intro />
+			<Projects />
+		</>
+	);
 }

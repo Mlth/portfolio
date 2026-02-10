@@ -5,8 +5,8 @@ export function Intro() {
 				<div className="drop-in text-7xl font-bungee">
 					Mads Lücking Thingvad
 				</div>
-				<div className="motion-preset-typewriter-[10] font-bitcount">
-					typewriter
+				<div className="fade-in font-bitcount">
+					Verdens sejeste softwareudvikler
 				</div>
 			</div>
 		</main>

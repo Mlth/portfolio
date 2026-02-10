@@ -12,6 +12,8 @@
 		"Bitcount Single", system-ui;
 	--font-bungee:
 		"Bungee", sans-serif;
+	--color-almenrorange: #FF5500;
+	--color-almenroffwhite: #E6E9DF;
 }
 
 /** 
@@ -39,9 +41,16 @@
 	@apply 
 		motion-translate-y-in-[-2000%] 
 		motion-rotate-in-20
-		motion-blur-in-[20px] 
-		motion-duration
-		motion-duration-500/rotate motion-delay-500/rotate motion-duration-1000/blur
+		motion-blur-in-[20px]
+		motion-duration-500/rotate motion-delay-800/rotate motion-duration-1000/blur motion-duration-700/translate
+}
+
+@utility fade-in {
+	@apply
+		motion-blur-in-[20px]
+		motion-scale-in-0
+		motion-running
+		motion-delay-1500/blur motion-delay-1500/scale
 }
 
 html,
