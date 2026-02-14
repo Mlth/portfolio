@@ -1,15 +1,11 @@
 export type ColorPack = {
     background?: string;
+    middleground?: string;
     foreground?: string;
-}
+};
 
-export enum ColorType {
-    FOREGROUND,
-    BACKGROUND,
-}
-export function toTailwindColor(color: string, type: ColorType) {
-    let colorString;
-    if (type === ColorType.BACKGROUND) colorString = `bg-${color}`
-    else if (type === ColorType.FOREGROUND) colorString = `text-${color}`
-    return colorString;
-}
+export const almenrOrange = '#FF5500';
+export const almenrOffOrange = '#F59D71';
+export const almenrOffWhite = '#E6E9DF';
+export const almenrGreen = '#004E07';
+export const almenrOffGreen = '#8fbd93'

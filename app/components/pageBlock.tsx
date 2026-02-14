@@ -9,7 +9,10 @@ interface PageBlockProps {
 export default function PageBlock({ colors, children }: PageBlockProps) {
 
     return (
-        <div className={`min-h-dvh px-50 py-20 ${colors.foreground} ${colors.background}`}>
+        <div 
+            className={`min-h-dvh px-50 py-30 flex`}
+            style={{ backgroundColor: colors.background }}
+        >
             {children}
         </div>
     )
